@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <WebView
+        android:id="@+id/animeWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <FrameLayout
+        android:id="@+id/fullscreenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone" />
+
+    <!-- Sadece imleç modunda görünür. Normal modda karttan karta seçim yapılır. -->
+    <View
+        android:id="@+id/tvCursor"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="@drawable/tv_cursor"
+        android:elevation="99dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/helpOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="18dp"
+        android:background="#CC000000"
+        android:elevation="100dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="9dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="9dp"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+</FrameLayout>

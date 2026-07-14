@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.dejan.animetv'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.dejan.animetv'
+        minSdk 23
+        targetSdk 35
+        versionCode 3
+        versionName '1.2-tv-pro-remote'
+    }
+
+    signingConfigs {
+        tvDebug {
+            storeFile file('tv-debug-key.jks')
+            storePassword 'animetv123'
+            keyAlias 'animetv'
+            keyPassword 'animetv123'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.tvDebug
+        }
+    }
+}
